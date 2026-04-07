@@ -33,6 +33,7 @@ type Subscriber = {
   name: string;
   email: string;
   phone: string | null;
+  interest?: string | null;
   createdAt: Date;
 };
 
@@ -152,7 +153,7 @@ export default function AdminDashboard({
   const tabs: { key: Tab; label: string; icon: React.ElementType; count: number }[] = [
     { key: "menu", label: "Menu", icon: UtensilsCrossed, count: menuItems.length },
     { key: "subscribers", label: "Subscribers", icon: Users, count: subscribers.length },
-    { key: "bookings", label: "Date Night Bookings", icon: Calendar, count: bookings.filter((b) => b.status === "pending").length },
+    { key: "bookings", label: "Private Chef Inquiries", icon: Calendar, count: bookings.filter((b) => b.status === "pending").length },
   ];
 
   return (
@@ -345,7 +346,7 @@ export default function AdminDashboard({
                 <table className="w-full text-sm">
                   <thead className="bg-blush/50">
                     <tr>
-                      {["Name", "Email", "Phone", "Joined"].map((h) => (
+                      {["Name", "Email", "Phone", "Interest", "Joined"].map((h) => (
                         <th
                           key={h}
                           className="text-left text-xs font-semibold text-brown uppercase tracking-wide px-4 py-3"
@@ -361,6 +362,7 @@ export default function AdminDashboard({
                         <td className="px-4 py-3 font-medium text-dark">{s.name}</td>
                         <td className="px-4 py-3 text-muted">{s.email}</td>
                         <td className="px-4 py-3 text-muted">{s.phone ?? "—"}</td>
+                        <td className="px-4 py-3 text-muted capitalize">{s.interest?.replace("-", " ") ?? "—"}</td>
                         <td className="px-4 py-3 text-muted">
                           {new Date(s.createdAt).toLocaleDateString()}
                         </td>
@@ -380,7 +382,7 @@ export default function AdminDashboard({
               className="text-2xl font-bold text-dark mb-6"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Date Night Bookings ({bookings.length})
+              Private Chef Inquiries ({bookings.length})
             </h2>
 
             {bookings.length === 0 ? (

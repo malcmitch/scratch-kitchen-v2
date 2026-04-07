@@ -5,7 +5,6 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-cream/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Brand */}
         <div>
           <p
             className="text-3xl text-gold mb-1"
@@ -22,7 +21,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Links */}
         <div>
           <h3 className="font-semibold text-cream mb-4 text-sm uppercase tracking-wider">
             Quick Links
@@ -30,8 +28,9 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {[
               { href: "/menu", label: "This Week's Menu" },
+              { href: "/#services", label: "Private Chef" },
               { href: "/about", label: "About Chef Tikara" },
-              { href: "/admin/login", label: "Admin" },
+              { href: "/#contact", label: "Contact" },
             ].map((l) => (
               <li key={l.href}>
                 <Link
@@ -45,7 +44,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h3 className="font-semibold text-cream mb-4 text-sm uppercase tracking-wider">
             Get in Touch

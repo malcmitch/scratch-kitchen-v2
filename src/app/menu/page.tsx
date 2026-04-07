@@ -99,14 +99,22 @@ export default async function MenuPage() {
           Ready to order?
         </h2>
         <p className="text-brown/70 text-sm mb-6">
-          Add items to your cart above, or call/text Chef Tikara directly.
+          Text, call, or email Chef Tikara to place your order.
         </p>
-        <a
-          href="sms:+13463331292"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-dark font-semibold text-sm hover:bg-gold-light transition-colors"
-        >
-          📱 Text 346-333-1292 to Order
-        </a>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="sms:+13463331292?body=Hi%20Chef%20Tikara!%20I%27d%20like%20to%20place%20an%20order."
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-dark font-semibold text-sm hover:bg-gold-light transition-colors"
+          >
+            📱 Text 346-333-1292
+          </a>
+          <a
+            href="mailto:hello@thescratchkitchentx.com?subject=Meal%20Prep%20Order"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gold text-gold font-semibold text-sm hover:bg-gold hover:text-dark transition-colors"
+          >
+            ✉️ Email Us
+          </a>
+        </div>
       </section>
     </div>
   );

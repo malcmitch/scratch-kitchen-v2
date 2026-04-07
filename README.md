@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Scratch Kitchen
 
-## Getting Started
+Next.js site and lightweight admin for Chef Tikara's meal prep and private chef business in Richmond, TX.
 
-First, run the development server:
+## Stack
+
+- Next.js App Router
+- Firebase Admin / Firestore
+- Tailwind CSS v4
+- Resend for weekly menu email sends
+
+## Core Flows
+
+- Homepage: meal prep + private chef positioning with contact/signup capture
+- Menu: weekly dishes from Firestore plus direct order CTAs
+- Subscribers: captured via `/api/subscribers`
+- Private chef inquiries: captured via `/api/bookings`
+- Admin: manage menu items, view subscribers and inquiries, send weekly menu email
+
+## Local Dev
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production Check
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Weekly Menu Update Prompt
 
-To learn more about Next.js, take a look at the following resources:
+Use this prompt when updating the menu with AI help:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+I need to update The Scratch Kitchen website menu for this week.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Here is this week's menu:
+- Theme: [e.g. Mexican-Inspired, Southern Comfort, Mediterranean]
+- Week of: [date]
 
-## Deploy on Vercel
+Dishes:
+1. [Dish Name] — $[price]
+   Description: [ingredients/description]
+   Category: [Chicken/Beef/Seafood/Salads/Pasta/Other]
+   Featured: [yes/no]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. [Dish Name] — $[price]
+   Description: [ingredients/description]
+   Category: [Chicken/Beef/Seafood/Salads/Pasta/Other]
+   Featured: [yes/no]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. [Dish Name] — $[price]
+   Description: [ingredients/description]
+   Category: [Chicken/Beef/Seafood/Salads/Pasta/Other]
+   Featured: [yes/no]
+
+Please update the menu items so the website reflects this week's menu, keep the current design and layout, preserve the ordering/contact flow, and make sure the homepage and menu page stay aligned.
+```
+
+## Business Notes
+
+- Menu drops Wednesday
+- Orders close Friday at 8pm
+- Pickup Sunday
+- Delivery Monday-Tuesday
+- Primary contact: `346-333-1292`
+- Email: `hello@thescratchkitchentx.com`

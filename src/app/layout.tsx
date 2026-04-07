@@ -25,7 +25,7 @@ const vibes = Great_Vibes({
 export const metadata: Metadata = {
   title: "The Scratch Kitchen | Meal Prep in Richmond TX | Chef Tikara",
   description:
-    "Chef Tikara's scratch-made meal prep service in Richmond, Texas. Fresh weekly menus, Sunday pickup, and delivery across Fort Bend County. Order by Friday at 8pm.",
+    "Chef Tikara's scratch-made meal prep and private chef service in Richmond, Texas. Fresh weekly menus, Sunday pickup, and delivery across Fort Bend County. Order by Friday at 8pm.",
   keywords: [
     "meal prep Richmond TX",
     "meal prep Fort Bend County",
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     "healthy meal prep Houston",
     "meal delivery Richmond Texas",
     "personal chef Richmond TX",
-    "date night chef Fort Bend",
+    "private chef Fort Bend County",
   ],
   openGraph: {
     title: "The Scratch Kitchen | Chef Tikara",
     description:
-      "Scratch-made meal prep in Richmond, TX. Weekly menus, Sunday pickup & Fort Bend County delivery.",
+      "Scratch-made meal prep and private chef service in Richmond, TX. Weekly menus, Sunday pickup & Fort Bend County delivery.",
     type: "website",
     locale: "en_US",
   },

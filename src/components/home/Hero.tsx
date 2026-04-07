@@ -4,7 +4,6 @@ import { ChevronRight } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-cream flex items-center overflow-hidden pt-16">
-      {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-blush/40 clip-hero" />
         <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-rose/20 blur-3xl" />
@@ -13,7 +12,6 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-4rem)] py-16">
-          {/* Text */}
           <div>
             <p
               className="text-5xl text-gold mb-2"
@@ -38,11 +36,10 @@ export default function Hero() {
               ingredients, real flavor, zero stress.
             </p>
 
-            {/* Schedule callout */}
             <div className="inline-flex flex-col sm:flex-row gap-2 sm:gap-6 bg-blush/60 border border-rose/30 rounded-2xl px-5 py-3 mb-8 text-sm text-brown">
-              <span>📅 Menu drops every Wednesday</span>
+              <span>Menu drops every Wednesday</span>
               <span className="hidden sm:block text-rose/50">·</span>
-              <span>🕗 Orders close Friday at 8pm</span>
+              <span>Orders close Friday at 8pm</span>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -50,18 +47,17 @@ export default function Hero() {
                 href="/menu"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-dark font-semibold hover:bg-gold-light transition-colors text-sm"
               >
-                View This Week's Menu
+                View This Week&apos;s Menu
                 <ChevronRight size={16} />
               </Link>
               <Link
-                href="mailto:hello@thescratchkitchentx.com"
+                href="/#services"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gold text-gold font-semibold hover:bg-gold hover:text-dark transition-colors text-sm"
               >
-                Hire a Private Chef
+                Private Chef Services
               </Link>
             </div>
 
-            {/* Quick stats */}
             <div className="flex gap-8 mt-12">
               <div>
                 <p
@@ -99,10 +95,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Image / Visual placeholder */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-80 h-80 sm:w-[420px] sm:h-[480px]">
-              {/* Main image frame */}
               <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-blush to-rose shadow-2xl overflow-hidden">
                 <img
                   src="/images/chef_tikara.png"
@@ -111,13 +105,11 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Floating card: call/text */}
               <div className="absolute -bottom-4 -left-6 bg-white shadow-xl rounded-2xl px-4 py-3 text-xs">
                 <p className="text-muted mb-0.5">Order by phone/text</p>
                 <p className="font-bold text-brown text-sm">346-333-1292</p>
               </div>
 
-              {/* Floating card: pickup */}
               <div className="absolute -top-4 -right-4 bg-gold text-dark shadow-xl rounded-2xl px-4 py-3 text-xs font-semibold">
                 <p>Pickup: Sundays</p>
                 <p className="font-normal text-dark/70">Delivery: Mon–Tue</p>

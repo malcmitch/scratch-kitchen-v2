@@ -5,29 +5,25 @@ const services = [
     title: "Meal Prep",
     icon: "🥗",
     description:
-      "Weekly scratch-made meals ready to heat and eat. New menu every Wednesday, orders close Friday at 8pm.",
+      "Weekly scratch-made meals ready to heat and eat. New menu every Wednesday, orders close Friday at 8pm. Delivery to Fort Bend County.",
     cta: { label: "See the Menu", href: "/menu" },
-  },
-  {
-    title: "Private Chef",
-    icon: "👨‍🍳",
-    description:
-      "Chef Tikara comes to your home or venue — curated multi-course dinner, drinks, and an unforgettable evening. Text or email to book.",
-    cta: { label: "Book via Text or Email", href: "sms:+13463331292" },
     featured: true,
   },
   {
-    title: "Catering",
-    icon: "🍱",
+    title: "Private Chef",
+    icon: "🍽️",
     description:
-      "Events, corporate lunches, family gatherings — we handle the food so you can focus on the people.",
-    cta: { label: "Inquire Now", href: "mailto:hello@thescratchkitchentx.com" },
+      "Chef Tikara comes to your home or venue for an unforgettable dining experience. Perfect for dinner parties, celebrations, and special occasions.",
+    cta: { label: "Inquire Now", href: "/#contact" },
   },
 ];
 
 export default function Services() {
   return (
-    <section className="py-20 px-4 sm:px-6 bg-cream border-t border-blush">
+    <section
+      id="services"
+      className="py-20 px-4 sm:px-6 bg-cream border-t border-blush"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <p
@@ -44,7 +40,7 @@ export default function Services() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((s) => (
             <div
               key={s.title}
@@ -61,7 +57,9 @@ export default function Services() {
               )}
               <div className="text-4xl mb-4">{s.icon}</div>
               <h3
-                className={`text-xl font-bold mb-3 ${s.featured ? "text-cream" : "text-dark"}`}
+                className={`text-xl font-bold mb-3 ${
+                  s.featured ? "text-cream" : "text-dark"
+                }`}
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 {s.title}

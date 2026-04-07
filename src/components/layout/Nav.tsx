@@ -8,7 +8,9 @@ import CartDrawer from "./CartDrawer";
 
 const links = [
   { href: "/menu", label: "This Week's Menu" },
+  { href: "/#services", label: "Private Chef" },
   { href: "/about", label: "About" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -20,7 +22,6 @@ export default function Nav() {
     <>
       <header className="fixed top-0 inset-x-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-blush">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="/" className="flex flex-col leading-tight">
             <span
               className="text-2xl text-gold"
@@ -33,7 +34,6 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
               <Link
@@ -46,7 +46,6 @@ export default function Nav() {
             ))}
           </nav>
 
-          {/* Actions */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setCartOpen(true)}
@@ -68,7 +67,6 @@ export default function Nav() {
               Order Now
             </Link>
 
-            {/* Mobile menu toggle */}
             <button
               className="md:hidden p-2 text-brown"
               onClick={() => setOpen(!open)}
@@ -79,7 +77,6 @@ export default function Nav() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div className="md:hidden bg-cream border-t border-blush px-4 pb-4">
             {links.map((l) => (

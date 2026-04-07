@@ -57,7 +57,7 @@ export default function AboutPage() {
                 Fort Bend County.
               </p>
               <p>
-                From hearty protein bowls to elegant date night experiences,
+                From hearty protein bowls to elevated private chef experiences,
                 Chef Tikara brings the same love and attention to every dish —
                 whether it's a quick weeknight meal prep or a five-course dinner
                 in your living room.
@@ -72,10 +72,10 @@ export default function AboutPage() {
                 View This Week's Menu
               </Link>
               <Link
-                href="/date-night"
+                href="/#contact"
                 className="px-6 py-3 rounded-full border-2 border-gold text-gold font-semibold text-sm hover:bg-gold hover:text-dark transition-colors"
               >
-                Book a Date Night
+                Private Chef Inquiry
               </Link>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
             {[
               { emoji: "🌿", title: "Real Ingredients", desc: "No fillers, no shortcuts. Every dish starts from scratch with fresh, quality produce and proteins." },
               { emoji: "❤️", title: "Community First", desc: "Proudly serving Richmond and Fort Bend County. Local, personal, and always accessible." },
-              { emoji: "✨", title: "Elevated Everyday", desc: "Whether it's Tuesday's meal prep or a Saturday date night — every meal deserves to be special." },
+              { emoji: "✨", title: "Elevated Everyday", desc: "Whether it's Tuesday's meal prep or a Saturday private chef dinner, every meal deserves to feel special." },
             ].map((v) => (
               <div key={v.title} className="text-center">
                 <div className="text-4xl mb-4">{v.emoji}</div>

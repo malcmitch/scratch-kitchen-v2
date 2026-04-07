@@ -3,7 +3,7 @@ import { adminDb } from "@/lib/firestore-admin";
 import { FieldValue } from "firebase-admin/firestore";
 
 export async function POST(req: NextRequest) {
-  const { name, email, phone } = await req.json();
+  const { name, email, phone, interest } = await req.json();
 
   if (!name || !email) {
     return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
     name,
     email,
     phone: phone || null,
+    interest: interest || null,
     createdAt: FieldValue.serverTimestamp(),
   };
 

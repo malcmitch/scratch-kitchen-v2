@@ -32,7 +32,7 @@ export default function BookingForm() {
       if (res.ok) {
         setStatus("success");
         setMessage(
-          "Your inquiry has been sent! Chef Tikara will be in touch within 24 hours to discuss your experience."
+          "Your inquiry has been sent! Chef Tikara will be in touch within 24 hours to discuss your private chef service."
         );
         setForm({ name: "", email: "", phone: "", preferredDate: "", guestCount: "", notes: "" });
       } else {
@@ -54,16 +54,16 @@ export default function BookingForm() {
         className="text-2xl font-bold text-dark mb-2"
         style={{ fontFamily: "var(--font-playfair)" }}
       >
-        Book Your Date Night
+        Private Chef Inquiry
       </h3>
       <p className="text-muted text-sm mb-6">
         Fill out the form and Chef Tikara will reach out within 24 hours to
-        start planning your experience.
+        start planning your event.
       </p>
 
       {status === "success" ? (
         <div className="bg-gold/10 border border-gold/30 rounded-2xl px-6 py-8 text-center">
-          <div className="text-4xl mb-3">🕯️</div>
+          <div className="text-4xl mb-3">🍽️</div>
           <p className="text-brown font-semibold mb-1">Inquiry Received!</p>
           <p className="text-muted text-sm">{message}</p>
         </div>
@@ -148,11 +148,11 @@ export default function BookingForm() {
 
           <div>
             <label className="text-xs font-semibold text-brown uppercase tracking-wide block mb-1.5">
-              Tell us about your vision
+              Tell us about your event
             </label>
             <textarea
               rows={4}
-              placeholder="Share details about the occasion, dietary preferences, wine/cocktail requests, venue type, or any special requests..."
+              placeholder="Share details about the occasion, dietary preferences, service style, venue type, or any special requests..."
               value={form.notes}
               onChange={(e) => setForm({ ...form, notes: e.target.value })}
               className={`${inputClass} resize-none`}
@@ -168,7 +168,7 @@ export default function BookingForm() {
             disabled={status === "loading"}
             className="w-full py-4 rounded-full bg-gold text-dark font-bold text-sm hover:bg-gold-light transition-colors disabled:opacity-60"
           >
-            {status === "loading" ? "Sending your request..." : "Request Your Date Night →"}
+            {status === "loading" ? "Sending your request..." : "Send Private Chef Inquiry →"}
           </button>
         </form>
       )}

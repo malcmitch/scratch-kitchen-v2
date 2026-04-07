@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import BookingForm from "@/components/date-night/BookingForm";
-import { Wine, ChefHat, Music, Star } from "lucide-react";
+import { ChefHat, Sparkles, Star, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Date Night at Home | The Scratch Kitchen | Chef Tikara",
+  title: "Private Chef Services | The Scratch Kitchen | Chef Tikara",
   description:
-    "Book a private Date Night at Home experience with Chef Tikara in Richmond, TX. Personal chef, bartender, curated dinner, wine & cocktails in the comfort of your home or venue.",
+    "Inquire about private chef services with Chef Tikara in Richmond, TX. Elevated scratch-made dining for dinner parties, celebrations, and in-home experiences across Fort Bend County.",
 };
 
 const includes = [
@@ -15,19 +15,19 @@ const includes = [
     desc: "Chef Tikara cooks a custom multi-course meal tailored to your taste.",
   },
   {
-    icon: Wine,
-    title: "Curated Drinks",
-    desc: "Wine pairings, signature cocktails, and custom bar setup for your evening.",
+    icon: Users,
+    title: "Hosted Experiences",
+    desc: "Perfect for dinner parties, birthdays, celebrations, and elevated in-home gatherings.",
   },
   {
     icon: Star,
-    title: "Full Setup",
-    desc: "Table decor, candles, ambiance — we set the scene so you focus on each other.",
+    title: "Scratch-Made Menus",
+    desc: "Thoughtful menus built around your preferences, dietary needs, and the kind of experience you want to create.",
   },
   {
-    icon: Music,
+    icon: Sparkles,
     title: "Your Venue",
-    desc: "Your home, backyard, or a rented venue — we come to you anywhere in Fort Bend County.",
+    desc: "Your home, backyard, or venue in Fort Bend County — Chef Tikara brings the same care, warmth, and polish anywhere you host.",
   },
 ];
 
@@ -35,12 +35,12 @@ const steps = [
   {
     step: "01",
     title: "Book a Consultation",
-    desc: "Fill out the form below. Chef Tikara will reach out within 24 hours to discuss your vision.",
+    desc: "Fill out the form below. Chef Tikara will reach out within 24 hours to learn more about your event.",
   },
   {
     step: "02",
     title: "Design Your Menu",
-    desc: "Choose your courses, dietary needs, wine & cocktail preferences together.",
+    desc: "Choose your courses, serving style, dietary needs, and event priorities together.",
   },
   {
     step: "03",
@@ -50,7 +50,7 @@ const steps = [
   {
     step: "04",
     title: "Enjoy the Experience",
-    desc: "Sit back and let Chef Tikara create an unforgettable evening for you and your guests.",
+    desc: "Sit back and let Chef Tikara create an elevated dining experience for you and your guests.",
   },
 ];
 
@@ -75,21 +75,21 @@ export default function DateNightPage() {
             className="text-4xl sm:text-6xl font-bold text-cream mb-6 leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Date Night
+            Private Chef
             <br />
-            <span className="text-gold">at Home</span>
+            <span className="text-gold">Services</span>
           </h1>
           <p className="text-cream/70 max-w-2xl mx-auto text-base leading-relaxed mb-8">
-            Curate a romantic evening with a personal chef, bartender, and
-            dinner in the comfort of your own home or venue. Chef Tikara
-            transforms your space into a private dining experience you'll never
-            forget.
+            From intimate dinners to celebratory gatherings, Chef Tikara brings
+            a scratch-made private chef experience to your home or venue.
+            Elevated food, thoughtful service, and a menu built around your
+            occasion.
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold text-dark font-bold hover:bg-gold-light transition-colors"
           >
-            🕯️ Book Your Experience
+            🍽️ Start Your Inquiry
           </a>
         </div>
       </section>
@@ -179,11 +179,11 @@ export default function DateNightPage() {
           "
         </p>
         <blockquote className="max-w-2xl mx-auto text-brown text-lg leading-relaxed italic mb-4">
-          She brought the whole restaurant to our living room. The food,
-          the drinks, the ambiance — it was the most romantic night we've had
-          in years.
+          She brought the whole restaurant to our home. The food, the warmth,
+          and the attention to detail made the night feel effortless and so
+          special for our guests.
         </blockquote>
-        <p className="text-muted text-sm">— Happy couple in Sugar Land, TX</p>
+        <p className="text-muted text-sm">— Happy client in Sugar Land, TX</p>
       </section>
 
       {/* Booking form */}
@@ -201,7 +201,7 @@ export default function DateNightPage() {
               className="text-3xl sm:text-4xl font-bold text-dark mb-6"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Book Your Date Night
+              Plan Your Private Chef Experience
             </h2>
             <div className="space-y-5">
               <div className="flex gap-3">
@@ -215,7 +215,7 @@ export default function DateNightPage() {
                 <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0" />
                 <div>
                   <p className="font-semibold text-dark text-sm">Book 1–2 weeks in advance</p>
-                  <p className="text-muted text-xs">Give us time to source the freshest ingredients for your menu</p>
+                  <p className="text-muted text-xs">Give us time to source the freshest ingredients and shape the right menu for your event</p>
                 </div>
               </div>
               <div className="flex gap-3">

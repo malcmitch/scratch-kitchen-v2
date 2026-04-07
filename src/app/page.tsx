@@ -16,8 +16,9 @@ export default function HomePage() {
             "@type": "LocalBusiness",
             name: "The Scratch Kitchen",
             description:
-              "Scratch-made meal prep service in Richmond, TX serving Fort Bend County",
+              "Scratch-made meal prep and private chef service in Richmond, TX serving Fort Bend County",
             telephone: "+13463331292",
+            email: "hello@thescratchkitchentx.com",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Richmond",
