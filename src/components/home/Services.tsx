@@ -5,7 +5,7 @@ const services = [
     title: "Meal Prep",
     icon: "🥗",
     description:
-      "Weekly scratch-made meals ready to heat and eat. New menu every Wednesday, orders close Friday at 8pm. Delivery to Fort Bend County.",
+      "Weekly scratch-made meals ready to heat and eat. New menus weekly, orders close end of day Wednesday, and meals are delivered every Sunday.",
     cta: { label: "See the Menu", href: "/menu" },
     featured: true,
   },

@@ -54,10 +54,27 @@ export default async function FeaturedDishes() {
           /* Empty state when no dishes are in DB yet */
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Herb Lemon Chicken", price: 14.99, category: "chicken", desc: "Grilled chicken breast with herbs, roasted veggies & rice", imageUrl: "/images/herb_lemon_chicken.png" },
-              { name: "Garlic Butter Shrimp", price: 16.99, category: "seafood", desc: "Gulf shrimp in a rich garlic butter sauce over pasta", imageUrl: "/images/garlic_butter_shrimp.png" },
-              { name: "Braised Short Rib", price: 19.99, category: "beef", desc: "Fall-off-the-bone short rib with smashed potatoes", imageUrl: "/images/braised_short_rib.png" },
-              { name: "Power Greens Bowl", price: 12.99, category: "salads", desc: "Kale, quinoa, roasted chickpeas & lemon tahini dressing", imageUrl: "/images/power_greens_bowl.png" },
+              {
+                name: "Southwestern Chicken Bowl",
+                price: 15,
+                category: "chicken",
+                desc: "Grilled chicken, cilantro lime rice, black beans, corn, and homemade pico de gallo.",
+                imageUrl: "/images/herb_lemon_chicken.png",
+              },
+              {
+                name: "Southwest Shrimp Avocado Salad",
+                price: 16,
+                category: "salads",
+                desc: "Fresh greens with chili lime shrimp, black beans, corn, pico de gallo, and avocado lime dressing.",
+                imageUrl: "/images/garlic_butter_shrimp.png",
+              },
+              {
+                name: "Chili Lime Salmon Plate",
+                price: 19,
+                category: "seafood",
+                desc: "Chili lime salmon with cilantro lime rice, black beans, sauteed corn, and avocado.",
+                imageUrl: "/images/braised_short_rib.png",
+              },
             ].map((dish) => (
               <DishCard key={dish.name} dish={dish} />
             ))}

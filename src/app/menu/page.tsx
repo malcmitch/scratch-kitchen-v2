@@ -9,7 +9,7 @@ import { Clock, MapPin } from "lucide-react";
 export const metadata: Metadata = {
   title: "This Week's Menu | The Scratch Kitchen",
   description:
-    "Browse Chef Tikara's fresh weekly meal prep menu in Richmond, TX. New dishes every Wednesday. Order by Friday at 8pm for Sunday pickup or Fort Bend County delivery.",
+    "Browse Chef Tikara's fresh weekly meal prep menu in Richmond, TX. This week's Mexican-inspired dishes are available now. Place orders by end of day Wednesday for Sunday delivery.",
 };
 
 async function getMenuItems() {
@@ -27,18 +27,64 @@ async function getMenuItems() {
     
     // Fallback mock data if DB is empty
     return [
-      { id: "mock1", name: "Herb Lemon Chicken", price: 14.99, category: "chicken", description: "Grilled chicken breast with herbs, roasted veggies & rice", imageUrl: "/images/herb_lemon_chicken.png" },
-      { id: "mock2", name: "Garlic Butter Shrimp", price: 16.99, category: "seafood", description: "Gulf shrimp in a rich garlic butter sauce over pasta", imageUrl: "/images/garlic_butter_shrimp.png" },
-      { id: "mock3", name: "Braised Short Rib", price: 19.99, category: "beef", description: "Fall-off-the-bone short rib with smashed potatoes", imageUrl: "/images/braised_short_rib.png" },
-      { id: "mock4", name: "Power Greens Bowl", price: 12.99, category: "salads", description: "Kale, quinoa, roasted chickpeas & lemon tahini dressing", imageUrl: "/images/power_greens_bowl.png" },
+      {
+        id: "mock1",
+        name: "Southwestern Chicken Bowl",
+        price: 15,
+        category: "chicken",
+        description:
+          "Grilled chicken, cilantro lime rice, black beans, corn, and homemade pico de gallo. Add avocado +$2 | shrimp +$5 | salmon +$7",
+        imageUrl: "/images/herb_lemon_chicken.png",
+      },
+      {
+        id: "mock2",
+        name: "Southwest Shrimp Avocado Salad",
+        price: 16,
+        category: "salads",
+        description:
+          "Fresh greens topped with chili lime shrimp, black beans, corn, pico de gallo, red onion, jalapeno, and avocado lime dressing. Chicken option $15 | Salmon option $18",
+        imageUrl: "/images/garlic_butter_shrimp.png",
+      },
+      {
+        id: "mock3",
+        name: "Chili Lime Salmon Plate",
+        price: 19,
+        category: "seafood",
+        description:
+          "Chili lime salmon, cilantro lime rice, black beans, sauteed corn, tomato, red onion, jalapeno, and avocado.",
+        imageUrl: "/images/braised_short_rib.png",
+      },
     ];
   } catch (error) {
     console.error("Error fetching menu items from Firestore:", error);
     return [
-      { id: "mock1", name: "Herb Lemon Chicken", price: 14.99, category: "chicken", description: "Grilled chicken breast with herbs, roasted veggies & rice", imageUrl: "/images/herb_lemon_chicken.png" },
-      { id: "mock2", name: "Garlic Butter Shrimp", price: 16.99, category: "seafood", description: "Gulf shrimp in a rich garlic butter sauce over pasta", imageUrl: "/images/garlic_butter_shrimp.png" },
-      { id: "mock3", name: "Braised Short Rib", price: 19.99, category: "beef", description: "Fall-off-the-bone short rib with smashed potatoes", imageUrl: "/images/braised_short_rib.png" },
-      { id: "mock4", name: "Power Greens Bowl", price: 12.99, category: "salads", description: "Kale, quinoa, roasted chickpeas & lemon tahini dressing", imageUrl: "/images/power_greens_bowl.png" },
+      {
+        id: "mock1",
+        name: "Southwestern Chicken Bowl",
+        price: 15,
+        category: "chicken",
+        description:
+          "Grilled chicken, cilantro lime rice, black beans, corn, and homemade pico de gallo. Add avocado +$2 | shrimp +$5 | salmon +$7",
+        imageUrl: "/images/herb_lemon_chicken.png",
+      },
+      {
+        id: "mock2",
+        name: "Southwest Shrimp Avocado Salad",
+        price: 16,
+        category: "salads",
+        description:
+          "Fresh greens topped with chili lime shrimp, black beans, corn, pico de gallo, red onion, jalapeno, and avocado lime dressing. Chicken option $15 | Salmon option $18",
+        imageUrl: "/images/garlic_butter_shrimp.png",
+      },
+      {
+        id: "mock3",
+        name: "Chili Lime Salmon Plate",
+        price: 19,
+        category: "seafood",
+        description:
+          "Chili lime salmon, cilantro lime rice, black beans, sauteed corn, tomato, red onion, jalapeno, and avocado.",
+        imageUrl: "/images/braised_short_rib.png",
+      },
     ];
   }
 }
@@ -50,6 +96,12 @@ export default async function MenuPage() {
     <div className="pt-4">
       {/* Header */}
       <section className="bg-dark py-10 px-4 sm:px-6 text-center">
+        <p className="inline-flex items-center rounded-full border border-blush/20 bg-blush/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-4">
+          Week of April 7, 2026
+        </p>
+        <p className="text-gold/90 text-sm sm:text-base italic mb-3">
+          Mexican-Inspired · Freshly Prepared · Chef-Curated
+        </p>
         <p
           className="text-5xl text-gold mb-2"
           style={{ fontFamily: "var(--font-vibes)" }}
@@ -64,18 +116,18 @@ export default async function MenuPage() {
         </h1>
         <p className="text-cream/60 max-w-lg mx-auto text-sm">
           Everything is made from scratch with fresh ingredients by Chef Tikara.
-          Order by Friday at 8pm.
+          Place orders by end of day Wednesday for Sunday delivery.
         </p>
 
         {/* Info pills */}
         <div className="flex flex-wrap justify-center gap-3 mt-8">
           <div className="flex items-center gap-2 bg-blush/10 border border-blush/20 rounded-full px-4 py-2 text-sm text-cream/70">
             <Clock size={14} className="text-gold" />
-            Menu drops every Wednesday · Orders close Friday at 8pm
+            New menus weekly · Orders close end of day Wednesday
           </div>
           <div className="flex items-center gap-2 bg-blush/10 border border-blush/20 rounded-full px-4 py-2 text-sm text-cream/70">
             <MapPin size={14} className="text-gold" />
-            Pickup: Richmond TX (Sundays) · Delivery: Fort Bend Co. (Mon–Tue)
+            Meals delivered every Sunday · Fort Bend County
           </div>
         </div>
       </section>
@@ -83,6 +135,34 @@ export default async function MenuPage() {
       {/* Menu grid */}
       <section className="py-14 px-4 sm:px-6 bg-cream min-h-[50vh]">
         <div className="max-w-7xl mx-auto">
+          <div className="mb-10 rounded-[2rem] border-2 border-gold bg-gradient-to-r from-[#fff3ee] to-[#f8e2d9] p-6 sm:p-8 shadow-sm">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p
+                  className="text-4xl text-[#b06d5d] mb-2"
+                  style={{ fontFamily: "var(--font-vibes)" }}
+                >
+                  Meal Deal
+                </p>
+                <h2
+                  className="text-3xl sm:text-4xl font-bold text-dark mb-2"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  4 Dinners for $50
+                </h2>
+                <p className="text-brown text-lg font-medium mb-2">4 for $65 with Salmon</p>
+                <p className="text-sm text-muted">
+                  Add avocado +$2 · shrimp +$5 · salmon +$7
+                </p>
+              </div>
+              <a
+                href="sms:+13463331292?body=Hi%20Chef%20Tikara!%20I%27d%20like%20to%20order%20the%20Meal%20Deal%20(4%20Dinners%20for%20%2450)."
+                className="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-dark transition-colors hover:bg-gold-light"
+              >
+                Grab the Deal
+              </a>
+            </div>
+          </div>
           <MenuGrid items={items as any} />
         </div>
       </section>
@@ -99,7 +179,7 @@ export default async function MenuPage() {
           Ready to order?
         </h2>
         <p className="text-brown/70 text-sm mb-6">
-          Text, call, or email Chef Tikara to place your order.
+          DM, call, text, or email Chef Tikara to place your order by end of day Wednesday.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a

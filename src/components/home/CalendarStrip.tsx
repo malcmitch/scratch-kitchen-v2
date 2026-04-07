@@ -8,21 +8,15 @@ const schedule = [
     icon: "📜",
   },
   {
-    day: "Friday",
+    day: "Wednesday",
     event: "Orders Close",
-    description: "Cutoff for weekend prep at 5 PM.",
+    description: "Place orders by end of day for this week's delivery.",
     icon: "⏱️",
   },
   {
     day: "Sunday",
-    event: "Pickup Day",
-    description: "Grab your meals in Richmond.",
-    icon: "🛍️",
-  },
-  {
-    day: "Monday",
     event: "Delivery Day",
-    description: "Fort Bend County deliveries arrive.",
+    description: "Fresh meals are delivered for the week ahead.",
     icon: "🚗",
   },
 ];
@@ -39,11 +33,11 @@ export default function CalendarStrip() {
             Our Weekly Flow
           </h2>
           <p className="text-sm text-brown mt-2">
-            Fresh meals prepared every weekend. Plan ahead!
+            Fresh meals weekly. Order by Wednesday, delivered Sunday.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative">
           {/* Connecting line for desktop */}
           <div className="hidden lg:block absolute top-[3.5rem] left-1/8 right-1/8 h-0.5 bg-gradient-to-r from-transparent via-gold/30 to-transparent -z-0" />
 

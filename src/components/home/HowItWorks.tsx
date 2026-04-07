@@ -10,14 +10,14 @@ const steps = [
     number: "02",
     title: "Place Your Order",
     description:
-      "Order by Friday at 8pm. Call or text 346-333-1292, or order online. Choose pickup or delivery.",
+      "Place your order by end of day Wednesday. DM, call, text 346-333-1292, or order online.",
     icon: "📱",
   },
   {
     number: "03",
     title: "Enjoy Your Meals",
     description:
-      "Pick up on Sunday in Richmond, TX — or get it delivered Monday or Tuesday anywhere in Fort Bend County.",
+      "Meals are delivered every Sunday with fresh, chef-curated dishes ready for the week ahead.",
     icon: "✨",
   },
 ];
@@ -76,9 +76,9 @@ export default function HowItWorks() {
         {/* Schedule bar */}
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
           {[
-            { day: "Wednesday", action: "Menu Drops", bg: "bg-blush/10 border-blush/20" },
-            { day: "Friday 8pm", action: "Orders Close", bg: "bg-rose/10 border-rose/20" },
-            { day: "Sun · Mon · Tue", action: "Pickup & Delivery", bg: "bg-gold/10 border-gold/20" },
+            { day: "Weekly", action: "New Menu", bg: "bg-blush/10 border-blush/20" },
+            { day: "Wednesday", action: "Orders Close", bg: "bg-rose/10 border-rose/20" },
+            { day: "Sunday", action: "Delivery Day", bg: "bg-gold/10 border-gold/20" },
           ].map((item) => (
             <div
               key={item.day}

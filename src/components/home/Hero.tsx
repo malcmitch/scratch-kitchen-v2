@@ -37,9 +37,9 @@ export default function Hero() {
             </p>
 
             <div className="inline-flex flex-col sm:flex-row gap-2 sm:gap-6 bg-blush/60 border border-rose/30 rounded-2xl px-5 py-3 mb-8 text-sm text-brown">
-              <span>Menu drops every Wednesday</span>
+              <span>Meals delivered every Sunday</span>
               <span className="hidden sm:block text-rose/50">·</span>
-              <span>Orders close Friday at 8pm</span>
+              <span>Place orders by end of day Wednesday</span>
             </div>
 
             <div className="flex flex-wrap gap-3">

@@ -89,7 +89,7 @@ export default function Footer() {
       <div className="border-t border-cream/10 px-4 sm:px-6 py-5 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-cream/40">
         <p>© {new Date().getFullYear()} The Scratch Kitchen. All rights reserved.</p>
         <p className="text-center">
-          Menu updates every Wednesday · Orders close Friday at 8pm
+          New menus weekly · Orders close Wednesday · Delivery every Sunday
         </p>
       </div>
     </footer>
