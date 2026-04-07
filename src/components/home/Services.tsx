@@ -9,11 +9,11 @@ const services = [
     cta: { label: "See the Menu", href: "/menu" },
   },
   {
-    title: "Date Night at Home",
-    icon: "🕯️",
+    title: "Private Chef",
+    icon: "👨‍🍳",
     description:
-      "Chef Tikara comes to your home or venue — personal chef, bartender, curated dinner & drinks for an unforgettable evening.",
-    cta: { label: "Book an Experience", href: "/date-night" },
+      "Chef Tikara comes to your home or venue — curated multi-course dinner, drinks, and an unforgettable evening. Text or email to book.",
+    cta: { label: "Book via Text or Email", href: "sms:+13463331292" },
     featured: true,
   },
   {
@@ -21,7 +21,7 @@ const services = [
     icon: "🍱",
     description:
       "Events, corporate lunches, family gatherings — we handle the food so you can focus on the people.",
-    cta: { label: "Inquire Now", href: "/date-night#contact" },
+    cta: { label: "Inquire Now", href: "mailto:hello@thescratchkitchentx.com" },
   },
 ];
 

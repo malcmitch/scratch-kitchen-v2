@@ -30,7 +30,6 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {[
               { href: "/menu", label: "This Week's Menu" },
-              { href: "/date-night", label: "Date Night at Home" },
               { href: "/about", label: "About Chef Tikara" },
               { href: "/admin/login", label: "Admin" },
             ].map((l) => (

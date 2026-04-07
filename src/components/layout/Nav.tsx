@@ -8,7 +8,6 @@ import CartDrawer from "./CartDrawer";
 
 const links = [
   { href: "/menu", label: "This Week's Menu" },
-  { href: "/date-night", label: "Date Night" },
   { href: "/about", label: "About" },
 ];
 

@@ -54,10 +54,10 @@ export default function Hero() {
                 <ChevronRight size={16} />
               </Link>
               <Link
-                href="/date-night"
+                href="mailto:hello@thescratchkitchentx.com"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gold text-gold font-semibold hover:bg-gold hover:text-dark transition-colors text-sm"
               >
-                Date Night at Home
+                Hire a Private Chef
               </Link>
             </div>
 
