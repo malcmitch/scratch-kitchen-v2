@@ -3,10 +3,21 @@
 import * as admin from "firebase-admin";
 import { getFirestore } from "firebase-admin/firestore";
 
+const projectId = process.env.FIREBASE_PROJECT_ID ?? "scratch-kitchen-tx";
+const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n");
+
 if (!admin.apps.length) {
   admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-    projectId: process.env.FIREBASE_PROJECT_ID ?? "scratch-kitchen-tx",
+    credential:
+      clientEmail && privateKey
+        ? admin.credential.cert({
+            projectId,
+            clientEmail,
+            privateKey,
+          })
+        : admin.credential.applicationDefault(),
+    projectId,
   });
 }
 

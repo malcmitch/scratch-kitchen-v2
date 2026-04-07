@@ -32,6 +32,29 @@ Open `http://localhost:3000`.
 npm run build
 ```
 
+## Deployment Env Vars
+
+Required in production:
+
+- `NEXT_PUBLIC_FIREBASE_API_KEY`
+- `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
+- `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
+- `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
+- `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
+- `NEXT_PUBLIC_FIREBASE_APP_ID`
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_CLIENT_EMAIL`
+- `FIREBASE_PRIVATE_KEY`
+- `ADMIN_PASSWORD`
+- `RESEND_API_KEY`
+- `RESEND_FROM_EMAIL`
+- `NEXT_PUBLIC_SITE_URL`
+
+Notes:
+
+- `FIREBASE_PRIVATE_KEY` should be stored with literal `\n` line breaks if added through a dashboard env UI.
+- The app falls back to application default credentials locally, but production should use `FIREBASE_CLIENT_EMAIL` + `FIREBASE_PRIVATE_KEY`.
+
 ## Weekly Menu Update Prompt
 
 Use this prompt when updating the menu with AI help:
